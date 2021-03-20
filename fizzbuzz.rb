@@ -43,6 +43,6 @@ class FizzBuzz
 end
 
 if __FILE__ == $0
-  fb = FizzBuzz.new(100,3,7)
+  fb = FizzBuzz.new(100,3,5)
   fb.GetFizzBuzz()
 end
