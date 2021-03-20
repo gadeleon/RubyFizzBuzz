@@ -8,7 +8,7 @@ class FizzBuzz
     @fizbuzz = calcFizzBuzz(@fizz,@buzz)
   end
 
-  def Fizzorbuzz(num)
+  def fizzorbuzz(num)
     # Least Common Multiple
     if num % @fizbuzz == 0
       return "FizzBuzz"
@@ -21,25 +21,22 @@ class FizzBuzz
       return num
     end
   end
+
   def calcFizzBuzz(fnum, snum)
-    # Quit if either number is a multiple of the other
+    # Quit if either number is a multiple of the other.
+    # Least common multiple should be fnum * snum
     if fnum % snum == 0 || snum % fnum == 0
-      if fnum > snum
-        raise Exception.new "Cannot fizzbuzz with this pair of numbers"
-      end
-      raise Exception.new "Cannot fizzbuzz with this pair of numbers"
-      return snum
-      # If mod 0 with two numbers doesn't work, LCM is the two multiplied
+      raise Exception.new 'Cannot fizzbuzz with this pair of numbers'
     else return fnum * snum
     end
 
   end
 
   def GetFizzBuzz()
-    # Prints out stored FizzBuzz
+    # Plays FizzBuzz with initialized params
     rng = 1
     until rng == @maxnum
-      puts Fizzorbuzz(rng)
+      puts fizzorbuzz(rng)
       rng += 1
     end
   end
